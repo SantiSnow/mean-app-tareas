@@ -13,6 +13,8 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 
+//routes
+app.use(require('./routes/tareas.routes'));
 
 //iniciar el server
 app.listen(app.get('port'), () =>{
