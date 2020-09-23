@@ -1,33 +1,31 @@
+const Tarea  = require ('../models/tareas');
+
 const TareasController = { };
 
-TareasController.getTareas = (req, res) =>{ 
+TareasController.getTareas = async (req, res) =>{ 
+    const tareas = await Tarea.find();
+    res.json(tareas);
+}
+
+TareasController.getTarea = async (req, res) => {
+    const tarea = await Tarea.findById(req.params.id);
+    res.json(tarea);
+}
+
+TareasController.setTareas = async (req, res) => {
+    const tarea = new Tarea(req.body);
+    await tarea.save();
     res.json({
-        solicitud: "Tareas de la aplicacion"
+        "status": "Recibido"
     });
 }
 
-TareasController.getTarea = (req, res) => {
-    res.json({
-        solicitud: "Tarea seleccionada"
-    });
-}
-
-TareasController.setTareas = (req, res) => {
-    res.json({
-        solicitud: "Subiendo tareas de la aplicacion"
-    });
-}
-
-TareasController.actualizarTareas = (req, res) => {
-    res.json({
-        solicitud: "Actualizando tarea de la aplicacion"
-    });
+TareasController.actualizarTareas = async (req, res) => {
+    
 }
 
 TareasController.deleteTareas = (req, res) => {
-    res.json({
-        solicitud: "Eliminando tareas de la aplicacion"
-    });
+    
 }
 
 module.exports = TareasController;
