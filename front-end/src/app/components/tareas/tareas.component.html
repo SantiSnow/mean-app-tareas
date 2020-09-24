@@ -6,7 +6,7 @@
             <br />
             <h2>Crear una nueva tarea:</h2>
             <br />
-            <form class="form-group" (submit)="crearTarea()">
+            <form class="form-group" #tareaForm="ngForm" (submit)="crearTarea(crearTarea)">
 
                 <label for="nombre">Nombre</label>
                 <input name="nombre" class="form-control" type="text" placeholder="Nombre de la tarea..." />
