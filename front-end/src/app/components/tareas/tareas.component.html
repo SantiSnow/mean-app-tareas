@@ -1,1 +1,42 @@
-<p>tareas works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+
+            <br />
+            <h2>Crear una nueva tarea:</h2>
+            <br />
+            <form class="form-group" (submit)="crearTarea()">
+
+                <label for="nombre">Nombre</label>
+                <input name="nombre" class="form-control" type="text" placeholder="Nombre de la tarea..." />
+                <br />
+
+                <label for="descripcion">Descripcion</label>
+                <input name="descripcion" class="form-control" type="text" placeholder="descripcion de la tarea..." />
+                <br />
+
+                <label for="imporancia">Imporancia</label>
+                <select name="imporancia" class="form-control">
+                    <option value="Postergable">Postergable</option>
+                    <option value="Regular">Regular</option>
+                    <option value="Importante">Importante</option>
+                </select>
+                <br />
+
+                <label for="fechaLimite">Fecha limite</label>
+                <input name="fechaLimite" class="form-control" type="date" />
+                <br />
+
+                <label for="solicitante">Solicitante</label>
+                <input name="solicitante" class="form-control" type="text" placeholder="Ingrese nombre de quien solicita o su correo.." />
+                <br />
+
+                <br />
+                <button type="submit" class="btn btn-primary">Crear</button>
+                <br />
+            </form>
+            <hr>
+        </div>
+    </div>
+</div>

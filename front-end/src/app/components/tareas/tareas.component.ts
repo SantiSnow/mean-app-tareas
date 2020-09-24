@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './tareas.component.html',
   styleUrls: ['./tareas.component.css']
 })
-export class TareasComponent implements OnInit {
+export class TareasComponent{
 
-  constructor() { }
+  crearTarea(){
 
-  ngOnInit(): void {
+    return false;
   }
-
+  
 }
