@@ -6,18 +6,18 @@
             <br />
             <h2>Crear una nueva tarea:</h2>
             <br />
-            <form class="form-group" #tareaForm="ngForm" (submit)="crearTarea(crearTarea)">
+            <form class="form-group" #tareaForm="ngForm" (ngSubmit)="crearTarea(crearTarea)">
 
                 <label for="nombre">Nombre</label>
                 <input name="nombre" class="form-control" type="text" placeholder="Nombre de la tarea..." />
                 <br />
 
                 <label for="descripcion">Descripcion</label>
-                <input name="descripcion" class="form-control" type="text" placeholder="descripcion de la tarea..." />
+                <input name="descripcion" class="form-control" type="text" placeholder="descripcion de la tarea..." #descripcion />
                 <br />
 
                 <label for="imporancia">Imporancia</label>
-                <select name="imporancia" class="form-control">
+                <select name="imporancia" class="form-control" #importancia>
                     <option value="Postergable">Postergable</option>
                     <option value="Regular">Regular</option>
                     <option value="Importante">Importante</option>
@@ -25,11 +25,11 @@
                 <br />
 
                 <label for="fechaLimite">Fecha limite</label>
-                <input name="fechaLimite" class="form-control" type="date" />
+                <input name="fechaLimite" class="form-control" type="date" #fechaLimite />
                 <br />
 
                 <label for="solicitante">Solicitante</label>
-                <input name="solicitante" class="form-control" type="text" placeholder="Ingrese nombre de quien solicita o su correo.." />
+                <input name="solicitante" class="form-control" type="text" placeholder="Ingrese nombre de quien solicita o su correo.." #solicitante />
                 <br />
 
                 <br />

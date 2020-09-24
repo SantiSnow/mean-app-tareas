@@ -1,32 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Tarea } from 'src/app/models/tarea';
+import { TareasService } from '../../services/tareas.service';
+
 
 @Component({
   selector: 'app-tareas',
   templateUrl: './tareas.component.html',
-  styleUrls: ['./tareas.component.css']
+  styleUrls: ['./tareas.component.css'],
+  providers: [TareasService]
 })
 export class TareasComponent{
 
-  tareaSelected: Tarea;
-  readonly url_api = 'http://localhost:3000/';
-
-  constructor(private http:HttpClient){
-
+  constructor(TareasService: TareasService){
 
   }
 
-  getTareas(){
-    return this.http.get(this.url_api);
-  }
+  crearTarea(crearTarea){
 
-  crearTarea(tarea){
-    return this.http.post(this.url_api, tarea);
-  }
-
-  actualizarTarea(tarea: Tarea){
-    
   }
   
 }
